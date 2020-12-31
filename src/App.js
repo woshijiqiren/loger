@@ -3,6 +3,7 @@ import './App.css';
 import React from 'react';
 import Login from './components/login/login.js'
 import Index from './components/index/index.js'
+import Log from './components/study/index.js'
 import { HashRouter, Route, Switch,Redirect } from 'react-router-dom';
 import MyRouter from './containers/MyRouter.js'
 import { createHashHistory } from 'history';
@@ -15,6 +16,7 @@ class App extends React.Component {
           <Switch>
             <Route path="/login" exact component={Login}></Route>
             <MyRouter path="/index" component={Index}></MyRouter>
+            <MyRouter path="/log" component={Log}></MyRouter>
             <Redirect to="login"></Redirect>
           </Switch>
         </HashRouter>
